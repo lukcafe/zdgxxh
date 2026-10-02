@@ -51,7 +51,7 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
-WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://check.helei.kdns.fr/check?sstp=vpn:vpn@")
+WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://luk61002.smo.de5.net/check?sstp=vpn:vpn@")
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))   # 与 Worker 网页端一致的并发模型
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
@@ -460,8 +460,8 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "saas.072159.xyz:443,hzytjy.cn:443,ali.nonull.pp.ua:443,auto.dolby.dpdns.org:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,cf.777791.xyz:443",
+        "eii.at:443,www.wuduanyun.com:443,tt.78607323.xyz:443,cdn.204910.best:443,www.5199dy.com:443,api.gzcrtw.com:443,"
+        "https://bestcf.pages.dev/domain/all.txt,https://bestcf.pages.dev/domain/Domain-TOP.txt,https://github.com/DustinWin/BestCF/releases/download/bestcf/bestcf-ip.txt,https://bestcf.pages.dev/random-region/US/50.txt,https://bestcf.pages.dev/domain/qms/all.txt,https://bestcf.pages.dev/domain/ygkkk/all.txt,https://bestcf.pages.dev/tiancheng/all.txt,https://bestcf.pages.dev/cmliu/all.txt,https://bestcf.pages.dev/cmliu2/all.txt,https://bestcf.pages.dev/cfyes/ipv4.txt,https://bestcf.pages.dev/gslege/Cfxyz.txt,https://cf.junzhen.qzz.io/bestipsbj.txt,https://bestcf.pages.dev/uouin/all.txt,https://raw.githubusercontent.com/HandsomeMJZ/cfip/refs/heads/main/full_ips.txt,https://cf.090227.xyz/ct?ips=66,https://cf.090227.xyz/cmcc?ips=66,https://090227.pages.dev/bestcf?isp=all&ips=66,https://090227.pages.dev/bestcf?isp=ct&ips=66,https://090227.pages.dev/bestcf?isp=cu&ips=66,https://090227.pages.dev/bestcf?isp=cmcc&ips=66,asia.877774.xyz,cmcc.877774.xyz,ct.877774.xyz,cu.877774.xyz,eur.877774.xyz,na.877774.xyz",
     ).split(",")
     if h.strip()
 ]
@@ -522,8 +522,8 @@ def build_hosts_text(data):
 
 
 # edgetunnel 完整订阅 (vless://) 配置
-EDT_UUID = os.environ.get("EDT_UUID", "90c14586-42a5-4c30-959d-8b36608d67f7")
-EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "ed.xiaolei.qzz.io")
+EDT_UUID = os.environ.get("EDT_UUID", "b6556af3-9aa4-4e70-891a-c51aec5fae0e")
+EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "xluk.smo.de5.net")
 EDT_FINGERPRINT = os.environ.get("EDT_FINGERPRINT", "chrome")
 SUB_URL = os.environ.get("SUB_URL", "https://jerylihub.github.io/gate/sub.txt")
 
